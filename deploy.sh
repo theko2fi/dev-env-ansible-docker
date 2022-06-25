@@ -104,6 +104,7 @@ infosNodes(){
 	echo ""
 }
 
+## ajouter les serveurs DNS de Google
 specifyNameServer(){
 	docker exec -ti $USER-debian-$i /bin/sh -c "echo '[network]' | sudo tee /etc/resolv.conf"
 	docker exec -ti $USER-debian-$i /bin/sh -c "echo 'generateResolvConf = false' | sudo tee -a /etc/resolv.conf"
